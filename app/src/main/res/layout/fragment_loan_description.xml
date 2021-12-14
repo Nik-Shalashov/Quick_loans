@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_loan_description"
+    android:background="#FFFFFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_info_about_loan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="@string/info_about_loan"
+            android:textSize="28sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_amount_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/amount_text"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_info_about_loan" />
+
+        <TextView
+            android:id="@+id/tv_amount_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="1000000"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/tv_amount_text"
+            app:layout_constraintTop_toBottomOf="@+id/tv_info_about_loan" />
+
+        <TextView
+            android:id="@+id/tv_percent_text"
+            style="@style/tv_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/percent_for_amount_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_amount_text" />
+
+        <TextView
+            android:id="@+id/tv_percent_sum"
+            style="@style/tv_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100"
+            app:layout_constraintStart_toEndOf="@id/tv_percent_text"
+            app:layout_constraintTop_toBottomOf="@+id/tv_amount_text" />
+
+        <TextView
+            android:id="@+id/tv_percent_sign"
+            style="@style/tv_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="%"
+            app:layout_constraintStart_toEndOf="@id/tv_percent_sum"
+            app:layout_constraintTop_toBottomOf="@+id/tv_amount_text" />
+
+        <TextView
+            android:id="@+id/tv_loan_term_text"
+            style="@style/tv_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/loan_term_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_percent_text" />
+
+        <TextView
+            android:id="@+id/tv_loan_term_sum"
+            style="@style/tv_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="31"
+            app:layout_constraintStart_toEndOf="@+id/tv_loan_term_text"
+            app:layout_constraintTop_toBottomOf="@+id/tv_percent_text" />
+
+        <TextView
+            android:id="@+id/tv_loan_date_text"
+            style="@style/tv_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/loan_date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_loan_term_text" />
+
+        <TextView
+            android:id="@+id/tv_loan_date_value"
+            style="@style/tv_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="31.12.2000"
+            app:layout_constraintStart_toEndOf="@+id/tv_loan_date_text"
+            app:layout_constraintTop_toBottomOf="@+id/tv_loan_term_text" />
+
+        <TextView
+            android:id="@+id/tv_first_name_text"
+            style="@style/tv_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/borrower_first_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_loan_date_text" />
+
+        <TextView
+            android:id="@+id/tv_first_name_value"
+            style="@style/tv_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Вася"
+            app:layout_constraintStart_toEndOf="@+id/tv_first_name_text"
+            app:layout_constraintTop_toBottomOf="@+id/tv_loan_date_text" />
+
+        <TextView
+            android:id="@+id/tv_last_name_text"
+            style="@style/tv_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/borrower_last_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_first_name_text" />
+
+        <TextView
+            android:id="@+id/tv_last_name_value"
+            style="@style/tv_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Пупкин"
+            app:layout_constraintStart_toEndOf="@+id/tv_last_name_text"
+            app:layout_constraintTop_toBottomOf="@+id/tv_first_name_text" />
+
+        <TextView
+            android:id="@+id/tv_borrower_phone_text"
+            style="@style/tv_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/borrower_phone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_last_name_text" />
+
+        <TextView
+            android:id="@+id/tv_borrower_phone_value"
+            style="@style/tv_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="88005553535"
+            app:layout_constraintStart_toEndOf="@+id/tv_borrower_phone_text"
+            app:layout_constraintTop_toBottomOf="@+id/tv_last_name_text" />
+
+        <TextView
+            android:id="@+id/tv_loan_status_text"
+            style="@style/tv_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/loan_state"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_borrower_phone_text" />
+
+        <TextView
+            android:id="@+id/tv_loan_status_value"
+            style="@style/tv_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Одобрено"
+            app:layout_constraintStart_toEndOf="@+id/tv_loan_status_text"
+            app:layout_constraintTop_toBottomOf="@+id/tv_borrower_phone_text" />
+
+        <FrameLayout
+            android:id="@+id/loadingLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/cardview_shadow_start_color"
+            android:visibility="gone"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"
+            tools:visibility="visible">
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

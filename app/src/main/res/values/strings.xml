@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">SHIFT_Education</string>
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <string name="enter">Войти</string>
+    <string name="dont_have_an_account">Нет аккаунта?</string>
+    <string name="registration">Зарегистрироваться</string>
+    <string name="enter_login">Введите логин</string>
+    <string name="enter_password">Введите пароль</string>
+    <string name="confirm_registration">Подтвердить регистрацию</string>
+    <string name="fill_in_the_form">Заполните анкету</string>
+    <string name="enter_loan_sum">Введите сумму займа</string>
+    <string name="amount_text">Сумма займа: </string>
+    <string name="percent_for_amount_text">Процентная ставка по займу: </string>
+    <string name="loan_term_text">Срок займа (дней): </string>
+    <string name="enter_name_text">Введите имя</string>
+    <string name="first_name">Имя</string>
+    <string name="enter_last_name">Введите фамилию</string>
+    <string name="last_name">Фамилия</string>
+    <string name="enter_phone_number">Введите номер телефона</string>
+    <string name="send_request">Отправить заявку</string>
+    <string name="loan_history">История займов</string>
+    <string name="info_about_loan">Информация по займу</string>
+    <string name="loan_date">Дата заёма: </string>
+    <string name="borrower_first_name">Имя заёмщика: </string>
+    <string name="borrower_last_name">Фамилия заёмщика: </string>
+    <string name="borrower_phone">Номер телефона заёмщика: </string>
+    <string name="loan_state">Статус заёма: </string>
+    <string name="info_for_new_users">Информация для новых пользователей</string>
+    <string name="Info_text">На главном экране отображается история Ваших займов. Чтобы посмотреть детальную информацию о конкретном займе, просто нажмите на него. Чтобы оформить новый займ, нажмите на главном экране на кнопку в правом нижнем углу. На появившемся экране заполните анкету, указав персональные данные заёмщика. Информация об условиях займа также будет представлена на этом экране.</string>
+    <string name="ok">ok</string>
 </resources>
