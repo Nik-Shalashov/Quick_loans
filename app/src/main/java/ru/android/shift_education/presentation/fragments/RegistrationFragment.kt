@@ -42,7 +42,7 @@ class RegistrationFragment: Fragment() {
             viewModel.registerLiveData.observe(viewLifecycleOwner) {renderData(it)}
             viewModel.isValidateTextLiveData.observe(viewLifecycleOwner) {
                 if (it) {
-                    viewModel.registerInApp(authResponseBody)
+                    viewModel.registerInApp(binding.etEnterLogin.text.toString(), binding.etEnterPassword.text.toString())
                 } else {
                     binding.fragmentRegistration.showSnackBar("Поля пустые")
                 }

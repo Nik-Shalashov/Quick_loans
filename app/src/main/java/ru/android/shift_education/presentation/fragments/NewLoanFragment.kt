@@ -49,7 +49,15 @@ class NewLoanFragment(): Fragment() {
             period = binding.tvLoanTermSum.text.toString().toInt(),
             phoneNumber = binding.etEnterPhoneNumber.text.toString()
         )
-        viewModel.createNewLoan(loanRequest)
+        binding.buttonSendRequest.setOnClickListener {
+            viewModel.createNewLoan(
+                amount = binding.sbLoanAmount.progress,
+                firstName = binding.etEnterFirstName.text.toString(),
+                lastName = binding.etEnterLastName.text.toString(),
+                percent = binding.tvPercentSum.text.toString().toDouble(),
+                period = binding.tvLoanTermSum.text.toString().toInt(),
+                phoneNumber = binding.etEnterPhoneNumber.text.toString())
+        }
     }
 
     private fun renderDataConditions(appState: AppState<LoanConditionsEntity>) {

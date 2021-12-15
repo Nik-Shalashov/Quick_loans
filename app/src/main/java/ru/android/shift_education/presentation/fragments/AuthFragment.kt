@@ -42,7 +42,7 @@ class AuthFragment: Fragment() {
             viewModel.loginLiveData.observe(viewLifecycleOwner) {renderData(it)}
             viewModel.isValidateTextLiveData.observe(viewLifecycleOwner) {
                 if (it) {
-                    viewModel.loginIntoApp(authResponseBody)
+                    viewModel.loginIntoApp(binding.etLogin.text.toString(), binding.etPassword.text.toString())
                 } else {
                     binding.fragmentAuth.showSnackBar("Поля пустые")
                 }

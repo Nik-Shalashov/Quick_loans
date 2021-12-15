@@ -49,22 +49,32 @@ class AuthViewModel @Inject constructor(
         _registerLiveData.postValue(AppState.Error(throwable.message))
     }
 
-    fun loginIntoApp(auth: AuthEntity) {
+    fun loginIntoApp(name: String, password: String) {
         viewModelScope.launch(
             handlerLogin
         ) {
             _loginLiveData.value = AppState.Loading
-            val request: AppState<String> = loginIntoAppUseCase(auth)
+            val request: AppState<String> = loginIntoAppUseCase(
+                AuthEntity(
+                    name = name,
+                    password
+                )
+            )
             _loginLiveData.value = request
         }
     }
 
-    fun registerInApp(auth: AuthEntity) {
+    fun registerInApp(name: String, password: String) {
         viewModelScope.launch(
             handlerRegister
         ) {
             _registerLiveData.value = AppState.Loading
-            val request = registerInAppUseCase(auth)
+            val request = registerInAppUseCase(
+                AuthEntity(
+                    name = name,
+                    password
+                )
+            )
             _registerLiveData.value = request
         }
     }

@@ -8,6 +8,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.converter.scalars.ScalarsConverterFactory
 import ru.android.shift_education.data.network.AuthInterceptor
 import ru.android.shift_education.data.network.LoansApi
 import javax.inject.Singleton
@@ -57,6 +58,7 @@ class NetworkModule {
         Retrofit.Builder()
             .baseUrl(baseUrl)
             .client(client)
+            .addConverterFactory(ScalarsConverterFactory.create())
             .addConverterFactory(gsonConverterFactory)
             .build()
 

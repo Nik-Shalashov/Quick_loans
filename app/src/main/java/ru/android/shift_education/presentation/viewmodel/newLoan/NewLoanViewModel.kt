@@ -44,10 +44,19 @@ class NewLoanViewModel @Inject constructor(
         }
     }
 
-    fun createNewLoan(loanRequestEntity: LoanRequestEntity) {
+    fun createNewLoan(amount: Int, firstName: String, lastName: String, percent: Double, period: Int, phoneNumber: String) {
         viewModelScope.launch(handlerNewLoan) {
             _newLoanLiveData.value = AppState.Loading
-            val newLoan = createNewLoanUseCase(loanRequestEntity)
+            val newLoan = createNewLoanUseCase(
+                LoanRequestEntity(
+                    amount,
+                    firstName,
+                    lastName,
+                    percent,
+                    period,
+                    phoneNumber
+                )
+            )
             _newLoanLiveData.value = newLoan
         }
 
